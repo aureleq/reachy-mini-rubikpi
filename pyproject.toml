@@ -1,0 +1,9 @@
+[project]
+name = "reachy-mini-rubikpi"
+version = "0.1.0"
+description = "Reachy Mini setup for Rubik Pi"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "reachy-mini[mujoco]==1.14.0",
+]
