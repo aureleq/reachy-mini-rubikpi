@@ -55,7 +55,7 @@ The daemon exposes Reachy Mini to clients such as Reachy Mini Control. Use headl
 Use the physical Reachy Mini connected to the Rubik Pi.
 
 ```bash
-uv run reachy-mini-daemon --headless
+uv run reachy-mini-daemon --headless --fastapi-host 0.0.0.0
 ```
 
 ### Simulation, headless
@@ -63,7 +63,7 @@ uv run reachy-mini-daemon --headless
 Use MuJoCo without opening a graphical viewer.
 
 ```bash
-uv run reachy-mini-daemon --sim --headless
+uv run reachy-mini-daemon --sim --headless --fastapi-host 0.0.0.0
 ```
 
 ### Simulation with GUI
@@ -71,7 +71,7 @@ uv run reachy-mini-daemon --sim --headless
 Requires a graphical display:
 
 ```bash
-uv run reachy-mini-daemon --sim
+uv run reachy-mini-daemon --sim --fastapi-host 0.0.0.0
 ```
 
 ## systemd
@@ -96,7 +96,7 @@ Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/reachy_mini_daemon
 Environment=GST_PLUGIN_PATH=/opt/gst-plugins-rs/lib/aarch64-linux-gnu
-ExecStart=/home/ubuntu/reachy_mini_daemon/.venv/bin/reachy-mini-daemon --headless
+ExecStart=/home/ubuntu/reachy_mini_daemon/.venv/bin/reachy-mini-daemon --headless --fastapi-host 0.0.0.0
 Restart=on-failure
 RestartSec=5
 
