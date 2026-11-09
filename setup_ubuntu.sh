@@ -21,6 +21,7 @@ sudo apt-get install -y \
 
 # Reachy Mini / GStreamer dependencies
 sudo apt-get install -y \
+    alsa-utils \    
     libgstreamer1.0-dev \
     libgstreamer-plugins-base1.0-dev \
     libgstreamer-plugins-bad1.0-dev \
